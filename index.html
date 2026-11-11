@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FGM Era — Friends Group Madrasha</title>
+
+<style>
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #202735;
+  --muted: #78818e;
+  --blue: #244d79;
+  --line: #e8ebef;
+  --gold: #c49337;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background: #172a40;
+  color: white;
+  padding: 22px 7%;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #a9c8e9;
+}
+
+.tagline {
+  color: #bdc9d7;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #dce5ef;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
+
+.intro {
+  margin-bottom: 28px;
+}
+
+.intro small {
+  color: var(--blue);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+}
+
+.intro h1 {
+  font-size: clamp(29px, 5vw, 43px);
+  margin: 8px 0;
+  letter-spacing: -1.5px;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.section {
+  margin-top: 35px;
+  scroll-margin-top: 20px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+
+.section-heading h2 {
+  font-size: 20px;
+}
+
+.section-heading span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  gap: 13px;
+}
+
+.member:last-child {
+  border-bottom: none;
+}
+
+.rank {
+  width: 28px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #8b929c;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.rank.first {
+  color: var(--gold);
+}
+
+.rank.second {
+  color: #8996a5;
+}
+
+.rank.third {
+  color: #aa7851;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #edf2f7;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.bar-bg {
+  height: 5px;
+  background: #edf0f3;
+  border-radius: 10px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: #527da8;
+  border-radius: 10px;
+}
+
+.score {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 48px;
+  text-align: right;
+}
+
+.score small {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.category-title {
+  padding: 17px;
+  border-bottom: 1px solid var(--line);
+}
+
+.category-title h3 {
+  font-size: 15px;
+}
+
+.category-title p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.category-card .member {
+  padding: 10px 13px;
+  gap: 9px;
+}
+
+.category-card .avatar {
+  width: 31px;
+  height: 31px;
+  font-size: 12px;
+}
+
+.category-card .name {
+  font-size: 12px;
+}
+
+.category-card .score {
+  font-size: 14px;
+}
+
+.notice {
+  background: #eaf0f6;
+  color: #344c65;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+footer {
+  background: #172a40;
+  color: #bdc9d7;
+  padding: 28px 18px;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 55px;
+}
+
+footer strong {
+  color: white;
+  display: block;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+@media(max-width:650px) {
+  main {
+    margin-top: 25px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .member {
+    padding: 11px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">FGM <span>ERA.</span></div>
+    <div class="tagline">Friends Group Madrasha · Unofficial Community</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#overall">Overall Ranking</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="intro" id="home">
+  <small>FGM ERA · SEASON 01</small>
+  <h1>Member Leaderboard</h1>
+  <p>Our members, our memories, our community.</p>
+</section>
+
+<!-- OVERALL RANKING -->
+
+<section class="section" id="overall">
+  <div class="section-heading">
+    <h2>Overall Ranking</h2>
+    <span>OUT OF 100 POINTS</span>
+  </div>
+  <div class="panel" id="overall-list"></div>
+</section>
+
+<!-- CATEGORY RANKINGS -->
+
+<section class="section" id="categories">
+  <div class="section-heading">
+    <h2>Category Rankings</h2>
+    <span>OUT OF 10 POINTS</span>
+  </div>
+  <div class="categories" id="category-list"></div>
+</section>
+
+<div class="notice" id="about">
+  <strong>About FGM Era</strong><br><br>
+  FGM Era stands for Friends Group Madrasha. This is an unofficial
+  website made for our friends. It is not an official madrasha website.
+  All rankings are based on submitted member evaluations and are
+  intended for fun.
+</div>
+
+</main>
+
+<footer>
+  <strong>FGM ERA.</strong>
+  Friends Group Madrasha
+  <br><br>
+  An unofficial friends community · 2026
+</footer>
+
+<script>
+
+const members = [
+  {
+    name: "Hafiz Botla",
+    friendship: 9,
+    funny: 4,
+    helping: 5,
+    loyalty: 4,
+    participation: 9
+  },
+  {
+    name: "Hafiz",
+    friendship: 3,
+    funny: 3,
+    helping: 4,
+    loyalty: 2,
+    participation: 2
+  },
+  {
+    name: "Siam",
+    friendship: 7,
+    funny: 4,
+    helping: 3,
+    loyalty: 1,
+    participation: 7
+  },
+  {
+    name: "Sipon",
+    friendship: 1,
+    funny: 1,
+    helping: 1,
+    loyalty: 1,
+    participation: 2
+  },
+  {
+    name: "Nurul Amin",
+    friendship: 9,
+    funny: 10,
+    helping: 1,
+    loyalty: 1,
+    participation: 10
+  },
+  {
+    name: "Fahad",
+    friendship: 3,
+    funny: 2,
+    helping: 1,
+    loyalty: 1,
+    participation: 3
+  },
+  {
+    name: "Rakib",
+    friendship: 8,
+    funny: 6,
+    helping: 9,
+    loyalty: 7,
+    participation: 5
+  },
+  {
+    name: "Adib",
+    friendship: 7,
+    funny: 6,
+    helping: 3,
+    loyalty: 2,
+    participation: 4
+  },
+  {
+    name: "Depo",
+    friendship: 3,
+    funny: 6,
+    helping: 2,
+    loyalty: 1,
+    participation: 2
+  },
+  {
+    name: "Nayem",
+    friendship: 3,
+    funny: 4,
+    helping: 6,
+    loyalty: 3,
+    participation: 6
+  },
+  {
+    name: "Abubokor",
+    friendship: 6,
+    funny: 6,
+    helping: 6,
+    loyalty: 6,
+    participation: 1
+  },
+  {
+    name: "Salman",
+    friendship: 3,
+    funny: 8,
+    helping: 1,
+    loyalty: 1,
+    participation: 2
+  },
+  {
+    name: "Sayed",
+    friendship: 1,
+    funny: 1,
+    helping: 1,
+    loyalty: 1,
+    participation: 1
+  }
+];
+
+const categories = [
+  {key:"friendship", title:"Friendship"},
+  {key:"funny", title:"Funny Personality"},
+  {key:"helping", title:"Helping Others"},
+  {key:"loyalty", title:"Loyalty"},
+  {key:"participation", title:"Group Participation"}
+];
+
+// Calculate total score automatically
+
+members.forEach(member => {
+  member.total =
+    (member.friendship +
+    member.funny +
+    member.helping +
+    member.loyalty +
+    member.participation) * 2;
+});
+
+// Rank function: equal scores get equal ranks
+
+function getRank(sorted, index, key) {
+  if (index > 0 &&
+      sorted[index][key] === sorted[index - 1][key]) {
+    return getRank(sorted, index - 1, key);
+  }
+  return index + 1;
+}
+
+// Rank colors
+
+function rankClass(rank) {
+  if (rank === 1) return "first";
+  if (rank === 2) return "second";
+  if (rank === 3) return "third";
+  return "";
+}
+
+// Member row
+
+function createMember(member, rank, score, max) {
+  const width = Math.max(0, Math.min(100, score / max * 100));
+
+  return `
+    <div class="member">
+      <div class="rank ${rankClass(rank)}">${rank}</div>
+
+      <div class="avatar">
+        ${member.name.charAt(0).toUpperCase()}
+      </div>
+
+      <div class="info">
+        <div class="name">${member.name}</div>
+        <div class="bar-bg">
+          <div class="bar" style="width:${width}%"></div>
+        </div>
+      </div>
+
+      <div class="score">
+        ${score}<small>/${max}</small>
+      </div>
+    </div>
+  `;
+}
+
+// Overall leaderboard
+
+const overall = [...members].sort(
+  (a, b) => b.total - a.total
+);
+
+document.getElementById("overall-list").innerHTML =
+  overall.map((member, index) => {
+    const rank = getRank(overall, index, "total");
+    return createMember(member, rank, member.total, 100);
+  }).join("");
+
+// Individual category leaderboards
+
+document.getElementById("category-list").innerHTML =
+  categories.map(category => {
+
+    const sorted = [...members].sort(
+      (a, b) => b[category.key] - a[category.key]
+    );
+
+    const rows = sorted.map((member, index) => {
+      const rank = getRank(sorted, index, category.key);
+
+      return createMember(
+        member,
+        rank,
+        member[category.key],
+        10
+      );
+    }).join("");
+
+    return `
+      <div class="category-card">
+        <div class="category-title">
+          <h3>${category.title}</h3>
+          <p>Member ranking · Highest score first</p>
+        </div>
+        ${rows}
+      </div>
+    `;
+
+  }).join("");
+
+</script>
+
+</body>
+</html>
