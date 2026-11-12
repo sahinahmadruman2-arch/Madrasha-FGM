@@ -213,6 +213,41 @@ footer{background:#101c2b;color:#aebac6;padding:28px 22px}
 }
 @media(max-width:390px){.member-grid{grid-template-columns:1fr}.hero h1{font-size:43px}.stats-grid{grid-template-columns:1fr 1fr}.stats-grid .stat:last-child{grid-column:span 2}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* FGM ERA — refreshed visual system */
+:root{--ink:#edf2f5;--navy:#10151d;--navy2:#1a2430;--blue:#8de0c1;--blue-soft:#243a38;--paper:#0d1219;--white:#171f29;--muted:#9aa8b5;--line:#2a3541;--gold:#f0c879;--green:#8de0c1;--shadow:0 24px 70px rgba(0,0,0,.28);--radius:22px;--ease:cubic-bezier(.2,.85,.2,1)}
+body{background:radial-gradient(ellipse at 80% 0%,rgba(67,119,112,.14),transparent 34%),var(--paper);color:var(--ink)}
+.topbar{height:82px;background:rgba(13,18,25,.86);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(22px)}
+.brand-mark{background:linear-gradient(145deg,#a1efd0,#4c9b83);color:#102019;border:0;border-radius:13px;font-weight:900;box-shadow:0 7px 25px rgba(116,216,180,.18)}
+.brand-name{letter-spacing:2.5px}.brand-sub{color:#8b9b9d}
+.nav-btn{color:#9ba9b4;border-radius:999px;padding:11px 15px}.nav-btn:hover,.nav-btn.active{background:#26352f;color:#b9f5d9}
+.status-pill{color:#b9f5d9;border-color:#426b5c;background:rgba(100,190,150,.08)}
+main{padding-top:40px}.page{animation:pageIn .68s var(--ease) both}.page.active{display:block}
+@keyframes pageIn{0%{opacity:0;transform:translateY(18px) scale(.992);filter:blur(4px)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.hero{min-height:430px;border:1px solid #34443f;border-radius:30px;background:linear-gradient(115deg,#17252a 0%,#1a2930 54%,#263c36 100%);box-shadow:0 28px 90px rgba(0,0,0,.28);padding:64px}
+.hero:before{width:560px;height:560px;border:1px solid rgba(169,239,206,.13);right:-90px;top:-170px}.hero:after{width:390px;height:390px;border:1px solid rgba(169,239,206,.1);right:0;top:-90px}
+.hero .eyebrow{color:#a6e7c9}.hero h1{font-size:clamp(48px,8vw,88px);letter-spacing:-3px}.hero h1 em{color:#a7edca}.hero p{color:#c0ccca;font-size:15px;line-height:1.9}
+.btn{border-radius:999px;padding:14px 20px;transition:transform .35s var(--ease),box-shadow .35s,background .35s,border-color .35s}.btn-primary{background:#a6edca;color:#102019}.btn-primary:hover{background:#c1f6db;box-shadow:0 12px 30px rgba(134,225,183,.2)}.btn-ghost{border:1px solid #52665e;background:rgba(255,255,255,.04);color:#eaf5ef}
+.hero-note{color:#a2b7ad;right:45px;bottom:32px}
+.stats-grid{gap:15px;margin:20px 0 48px}.stat,.feature-card,.panel,.member-card,.rank-panel,.category-box,.notice-card{background:linear-gradient(145deg,#19232d,#151e27);border:1px solid #2b3944;border-radius:20px;box-shadow:0 8px 28px rgba(0,0,0,.08)}
+.stat{padding:22px 23px;transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}.stat:hover,.member-card:hover,.feature-card:hover{transform:translateY(-6px);border-color:#547a6d;box-shadow:0 20px 45px rgba(0,0,0,.22)}
+.stat-label,.stat-foot,.section-head p,.page-title p,.member-card small,.member-card-bottom span,.rank-header span,.rank-person small,.rank-score small,.strip-label{color:#93a2ad}
+.stat-value{color:#eaf5ef}.eyebrow{color:#8edab9}.section-head h2{color:#f0f5f2;font-size:32px}.text-link{color:#a6edca}.feature-card{padding:25px}.feature-card h3{color:#f0f5f2;font-size:25px}.feature-card p{color:#aab7bd;line-height:1.8}.mini-tag{background:#263a35;color:#a9ebca;border:1px solid #3c5c4e}
+.avatar{background:#263d3a;color:#b8f1d5;border:1px solid #3b5a50}.avatar.tone-1{background:#3b3327;color:#f2d39c}.avatar.tone-2{background:#293a48;color:#b9dcf2}.avatar.tone-3{background:#3b3044;color:#dfc5f1}.avatar.tone-4{background:#493331;color:#f0c2b7}
+.update-row{border-color:#2b3944}.update-date{background:#263a35;color:#a6edca}.update-row strong{color:#eef5f1}.update-row small{color:#9eacb5}
+.page-title h1{color:#f3f7f4;letter-spacing:-2px}.search-wrap input{background:#17212b;border:1px solid #35434f;color:#edf4ef;border-radius:999px;padding:14px 16px 14px 40px}.search-wrap input::placeholder{color:#83929e}.search-wrap input:focus{border-color:#80c9a7;box-shadow:0 0 0 4px rgba(141,224,193,.1)}
+.member-grid{gap:16px}.member-card{padding:21px;transition:transform .42s var(--ease),box-shadow .42s,border-color .42s,background .42s}.member-card h3{color:#f0f5f2}.member-card-bottom{border-color:#2d3a44}.member-card-bottom strong{color:#a9edca}
+.tabs{gap:8px}.tab{border:1px solid #33414c;background:#17212b;color:#aab7c0;border-radius:999px;padding:11px 16px}.tab:hover{border-color:#7cb99c;color:#d8f5e5}.tab.active{background:#a6edca;border-color:#a6edca;color:#102019}
+.ranking-layout{grid-template-columns:1fr 300px;gap:18px}.rank-panel{overflow:hidden}.rank-header{border-color:#2d3a44}.rank-header h3{color:#eff6f1}.rank-row{border-color:#28343e;transition:background .3s,padding .3s}.rank-row:hover{background:#202e34;padding-left:23px}.rank-person strong{color:#edf4ef}.rank-number.gold{color:#f0c879}.rank-number.silver{color:#b7c5d1}.rank-number.bronze{color:#d39a72}.rank-side{background:linear-gradient(150deg,#24463b,#172b2b);border:1px solid #426a58;border-radius:20px;padding:24px}.rank-side .eyebrow{color:#a6edca}.rank-side h3{color:#f0fff6}.rank-side p,.big-caption{color:#b3c8bd}.big-number{color:#a6edca}
+.category-box{overflow:hidden}.category-box-head{border-color:#2d3a44}.category-box-head h3{color:#eff5f1}.category-box-head span{color:#91a49a}.category-box .rank-row{background:transparent}
+.notice-card{padding:25px;transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}.notice-card:hover{transform:translateY(-5px);border-color:#608b77;box-shadow:0 20px 45px rgba(0,0,0,.2)}.notice-card .date{color:#a6edca}.notice-card h3{color:#f0f5f2}.notice-card p{color:#aebbc2;line-height:1.8}
+.disclaimer{background:#1b2929;border:1px solid #344e43;color:#b7c8c0;border-radius:16px;padding:16px 18px}.about-main,.about-quote{background:#19232d;border:1px solid #2c3a45;border-radius:22px}.about-main h2,.about-quote blockquote{color:#edf5ef}.about-main p,.about-quote small{color:#aebbc2}
+footer{background:#090e14;border-top:1px solid #26323c;color:#a4b1b9}.footer-brand{color:#a6edca}.mobile-menu{border-color:#42564e;color:#d9f5e5;border-radius:12px}
+.modal{background:#19232d;border:1px solid #40534d;color:#edf5ef;box-shadow:0 30px 100px rgba(0,0,0,.55)}.modal-close{color:#dce8e1}.modal-profile p{color:#9eada8}.score-line span{color:#b2c0bb}.score-track{background:#2c3a42}.score-fill{background:#8edab9}.toast{background:#a6edca;color:#102019}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .75s var(--ease),transform .75s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.topbar-inner{width:calc(100% - 28px)}.status-pill{display:none}.mobile-menu{display:block}.nav{display:none;position:absolute;top:72px;left:14px;right:14px;padding:12px;background:#17232b;border:1px solid #35463f;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.35);flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav-btn{text-align:left}.hero{padding:42px 30px;min-height:400px}.hero-note{display:none}.ranking-layout{grid-template-columns:1fr}.rank-side{display:flex;align-items:center;justify-content:space-between;gap:18px}}
+@media(max-width:600px){main{width:calc(100% - 28px);padding-top:22px}.hero{padding:34px 23px;min-height:420px;border-radius:23px}.hero h1{font-size:51px;letter-spacing:-2.5px}.hero p{font-size:13px}.stats-grid{grid-template-columns:1fr 1fr;gap:9px;margin-bottom:36px}.stat{padding:16px}.stat:last-child{grid-column:1/-1}.stat-value{font-size:25px}.section-head{align-items:flex-start}.section-head h2{font-size:26px}.feature-grid,.member-grid,.category-grid,.about-grid{grid-template-columns:1fr}.page-title{align-items:flex-start;flex-direction:column}.page-title h1{font-size:42px}.search-wrap{width:100%}.member-card{padding:17px}.rank-side{padding:18px}.rank-row{padding:11px 12px;gap:8px}.rank-number{width:22px}.rank-score{min-width:40px}.tab{padding:9px 12px;font-size:10px}.notice-layout{grid-template-columns:1fr}.footer-inner{padding-left:18px;padding-right:18px}}
+@media(prefers-reduced-motion:reduce){.page,.reveal,.member-card,.stat,.notice-card,.btn{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -228,7 +263,6 @@ footer{background:#101c2b;color:#aebac6;padding:28px 22px}
    <button class="nav-btn" data-page="members">Members</button>
    <button class="nav-btn" data-page="rankings">Rankings</button>
    <button class="nav-btn" data-page="notices">Notices</button>
-   <button class="nav-btn" data-page="memories">Memories</button>
    <button class="nav-btn" data-page="about">About</button>
   </nav>
   <div class="top-actions"><span class="status-pill">● PRIVATE FRIENDS SPACE</span><button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button></div>
@@ -251,18 +285,18 @@ footer{background:#101c2b;color:#aebac6;padding:28px 22px}
  </div>
 
  <div class="stats-grid">
-  <div class="stat"><div class="stat-label">Founding members</div><div class="stat-value" id="homeCount">13</div><div class="stat-foot">One group, many personalities</div></div>
+  <div class="stat"><div class="stat-label">Founding members</div><div class="stat-value" id="homeCount">14</div><div class="stat-foot">One group, many personalities</div></div>
   <div class="stat"><div class="stat-label">Community since</div><div class="stat-value">2026</div><div class="stat-foot">The beginning of FGM Era</div></div>
   <div class="stat"><div class="stat-label">Top member score</div><div class="stat-value" id="topScore">70<span style="font-size:13px;color:#89939c"> / 100</span></div><div class="stat-foot" id="topName">Rakib</div></div>
  </div>
 
- <div class="section-head"><div><div class="eyebrow">GET TO KNOW US</div><h2>The people behind FGM</h2><p>Thirteen names. Countless stories.</p></div><button class="text-link" data-go="members">All members ↗</button></div>
+ <div class="section-head"><div><div class="eyebrow">GET TO KNOW US</div><h2>The people behind FGM</h2><p>Fourteen names. Countless stories.</p></div><button class="text-link" data-go="members">All members ↗</button></div>
  <div class="feature-grid">
   <div class="feature-card">
    <div class="feature-top"><span class="mini-tag">THE FOUNDING CREW</span><span style="font-size:20px;color:#a7b3be">✳</span></div>
    <h3>Different people, one circle.</h3>
    <p>Everyone brings something different to the group. This space is a simple way to celebrate the people who make it what it is.</p>
-   <div class="member-strip"><div class="avatar-stack" id="avatarStack"></div><span class="strip-label">Meet all 13 members</span></div>
+   <div class="member-strip"><div class="avatar-stack" id="avatarStack"></div><span class="strip-label">Meet all 14 members</span></div>
   </div>
   <div class="feature-card">
    <div class="feature-top"><span class="mini-tag">FROM THE NOTICEBOARD</span><span style="font-size:18px">↗</span></div>
@@ -298,36 +332,27 @@ footer{background:#101c2b;color:#aebac6;padding:28px 22px}
 </section>
 
 <section class="page" id="page-notices">
- <div class="page-title"><div><div class="eyebrow">WHAT'S HAPPENING</div><h1>Noticeboard</h1><p>Group updates, reminders and little announcements.</p></div><button class="btn btn-primary" id="addNoticeBtn">＋ Add a notice</button></div>
+ <div class="page-title"><div><div class="eyebrow">WHAT'S HAPPENING</div><h1>Noticeboard</h1><p>Group updates, reminders and little announcements.</p></div><span class="mini-tag">UPDATED BY ADMIN</span></div>
  <div class="notice-layout" id="noticeGrid"></div>
- <div class="disclaimer">This is a local demo noticeboard. Notices you add are saved only in this browser on this device. There is no shared online posting.</div>
+ <div class="disclaimer">Notices are managed directly in the website code. Edit the <strong>notices</strong> list in the script to publish an update when you upload the new website version.</div>
 </section>
 
-<section class="page" id="page-memories">
- <div class="page-title"><div><div class="eyebrow">THE GOOD TIMES</div><h1>Memories</h1><p>A little gallery for moments worth keeping.</p></div><button class="btn btn-primary" id="addMemoryBtn">＋ Add a photo</button></div>
- <div class="memory-grid" id="memoryGrid">
-  <div class="memory-card"><div class="memory-art"><span>Our beginning</span></div><div class="memory-info"><strong>The FGM Era starts</strong><p>Every group has a first chapter.</p></div></div>
-  <div class="memory-card"><div class="memory-art"><span>Good times</span></div><div class="memory-info"><strong>Just the usual chaos</strong><p>The moments that make us laugh.</p></div></div>
-  <div class="memory-card"><div class="memory-art"><span>More to come</span></div><div class="memory-info"><strong>To be continued</strong><p>Plenty of memories still ahead.</p></div></div>
- </div>
- <div class="disclaimer">Photos added here are previews stored only in this browser session. They are not uploaded or shared with other members.</div>
-</section>
+
 
 <section class="page" id="page-about">
  <div class="page-title"><div><div class="eyebrow">WHO WE ARE</div><h1>About FGM Era</h1><p>A friends' project, made for friends.</p></div></div>
  <div class="about-grid">
-  <div class="about-main"><div class="eyebrow">THE NAME</div><h2>Friends Group Madrasha.</h2><p>FGM stands for Friends Group Madrasha. FGM Era is an unofficial community website created just for our circle of friends. It brings our member list, fun rankings, notices and memories together in one place.</p><p>This is not the official website of any madrasha or educational institution. It is an independent friends project, made to celebrate our group.</p></div>
+  <div class="about-main"><div class="eyebrow">THE NAME</div><h2>Friends Group Madrasha.</h2><p>FGM stands for Friends Group Madrasha. FGM Era is an unofficial community website created just for our circle of friends. It brings our member list, fun rankings and notices together in one place.</p><p>This is not the official website of any madrasha or educational institution. It is an independent friends project, made to celebrate our group.</p></div>
   <div class="about-quote"><blockquote>“The best part of a memory is having people to remember it with.”</blockquote><small>— THE FGM SPIRIT</small></div>
  </div>
  <div class="disclaimer"><strong>Unofficial community notice</strong><br>FGM Era is a private, unofficial friends project. It is not affiliated with, approved by, or endorsed by the madrasha. Member scores are submitted for entertainment and should be treated respectfully.</div>
 </section>
 </main>
 
-<footer><div class="footer-inner"><div><div class="footer-brand">FGM ERA.</div><div style="font-size:10px;margin-top:4px">Friends Group Madrasha · Est. 2026</div></div><div class="footer-note">An unofficial friends community.<br>Made for the memories, not the rankings.</div></div></footer>
+<footer><div class="footer-inner"><div><div class="footer-brand">FGM ERA.</div><div style="font-size:10px;margin-top:4px">Friends Group Madrasha · Est. 2026</div></div><div class="footer-note">An unofficial friends community.<br>Made for our circle, not the rankings.</div></div></footer>
 </div>
 
 <div class="modal-backdrop" id="memberModal"><div class="modal"><div class="modal-top"><span class="eyebrow">MEMBER PROFILE</span><button class="modal-close" id="closeModal">×</button></div><div id="modalContent"></div></div></div>
-<div class="modal-backdrop" id="noticeModal"><div class="modal"><div class="modal-top"><span class="eyebrow">NEW NOTICE</span><button class="modal-close" id="closeNotice">×</button></div><h2 style="font:500 25px Georgia,serif;margin:15px 0">Add an announcement</h2><input id="noticeTitle" placeholder="Notice title" maxlength="70" style="width:100%;padding:12px;border:1px solid #dfe3e5;border-radius:9px;margin-bottom:10px;outline:none"><textarea id="noticeBody" placeholder="Write a short update..." maxlength="300" style="width:100%;height:105px;padding:12px;border:1px solid #dfe3e5;border-radius:9px;resize:vertical;outline:none"></textarea><button class="btn btn-primary" id="saveNotice" style="margin-top:12px">Save notice</button></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -344,18 +369,20 @@ const members=[
 {name:"Nayem",friendship:3,funny:4,helping:6,loyalty:3,participation:6},
 {name:"Abubokor",friendship:6,funny:6,helping:6,loyalty:6,participation:1},
 {name:"Salman",friendship:3,funny:8,helping:1,loyalty:1,participation:2},
-{name:"Sayed",friendship:1,funny:1,helping:1,loyalty:1,participation:1}
+{name:"Sayed",friendship:1,funny:1,helping:1,loyalty:1,participation:1},
+{name:"Sahin",rated:false}
 ];
 const cats=[
 {key:"friendship",name:"Friendship"},{key:"funny",name:"Funny personality"},
 {key:"helping",name:"Helping others"},{key:"loyalty",name:"Loyalty"},
 {key:"participation",name:"Group participation"}
 ];
-members.forEach(m=>m.total=(m.friendship+m.funny+m.helping+m.loyalty+m.participation)*2);
+members.forEach(m=>{if(m.rated!==false)m.total=(m.friendship+m.funny+m.helping+m.loyalty+m.participation)*2});
+const ratedMembers=members.filter(m=>m.rated!==false);
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const initials=n=>n.split(" ").map(x=>x[0]).join("").slice(0,2).toUpperCase();
-const sortedBy=key=>[...members].sort((a,b)=>b[key]-a[key]||a.name.localeCompare(b.name));
+const sortedBy=key=>[...ratedMembers].sort((a,b)=>b[key]-a[key]||a.name.localeCompare(b.name));
 function rankAt(arr,i,key){return i>0&&arr[i][key]===arr[i-1][key]?rankAt(arr,i-1,key):i+1}
 function medalClass(r){return r===1?"gold":r===2?"silver":r===3?"bronze":""}
 function showToast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2400)}
@@ -375,7 +402,7 @@ function renderMembers(query=""){
  <article class="member-card" data-member="${esc(m.name)}" tabindex="0">
   <div class="member-card-top"><div class="avatar tone-${i%5}">${initials(m.name)}</div>
    <div><h3>${esc(m.name)}</h3><small>Founding member · FGM Era</small></div></div>
-  <div class="member-card-bottom"><span>Overall score</span><strong>${m.total}/100</strong><span class="card-arrow">↗</span></div>
+  <div class="member-card-bottom"><span>${m.rated===false?"Ranking status":"Overall score"}</span><strong>${m.rated===false?"Not rated yet":m.total+"/100"}</strong><span class="card-arrow">↗</span></div>
  </article>`).join("");
  $("#noMembers").hidden=list.length!==0;
  document.querySelectorAll("[data-member]").forEach(card=>{
@@ -388,6 +415,7 @@ $("#memberSearch").addEventListener("input",e=>renderMembers(e.target.value));
 
 function openMember(name){
  const m=members.find(x=>x.name===name);if(!m)return;
+ if(m.rated===false){$("#modalContent").innerHTML=`<div class="modal-profile"><div class="avatar">${initials(m.name)}</div><div><h2>${esc(m.name)}</h2><p>Founding member · FGM Era</p></div></div><div class="disclaimer">Sahin has been added to the member list. Scores have not been entered yet, so he is not included in the rankings.</div>`;$("#memberModal").classList.add("open");return;}
  $("#modalContent").innerHTML=`
  <div class="modal-profile"><div class="avatar">${initials(m.name)}</div><div><h2>${esc(m.name)}</h2><p>Founding member · FGM Era</p></div></div>
  <div style="display:flex;justify-content:space-between;align-items:center;margin:0 0 15px"><span style="font-size:11px;color:#78818e">Overall score</span><strong style="font:500 27px Georgia,serif">${m.total}<small style="font:11px Arial;color:#78818e"> / 100</small></strong></div>
@@ -419,45 +447,33 @@ function renderCategoryGrid(){
  }).join("");
 }
 
-let notices=[
-{date:"NOV 11, 2026",title:"Welcome to FGM Era",body:"Our unofficial friends community website is now here. Explore the members, rankings and memories."},
-{date:"SEASON 01",title:"Member rankings are live",body:"The first set of friendly member scores has been added. Check the overall and category leaderboards."}
+// ============================================================
+// EDIT NOTICES HERE — easiest way to add a new notice:
+// Copy one object below, change the date, title and message.
+// Put the newest notice at the TOP of this list.
+// Example: {date:"NOV 15, 2026", title:"Game day", body:"We are meeting after class."},
+// Then save index.html and upload/re-publish the website.
+// ============================================================
+const notices=[
+ {date:"NOV 12, 2026",title:"Welcome to FGM Era",body:"Our unofficial friends community website is now here. Explore the members and rankings."},
+ {date:"NOV 12, 2026",title:"Member list updated",body:"Sahin has been added to the FGM Era member list."},
+ {date:"SEASON 01",title:"Member rankings are live",body:"The first set of friendly member scores has been added. Check the overall and category leaderboards."}
 ];
 function renderNotices(){
  $("#noticeGrid").innerHTML=notices.map(n=>`<article class="notice-card"><div class="date">${esc(n.date)}</div><h3>${esc(n.title)}</h3><p>${esc(n.body)}</p></article>`).join("");
 }
-$("#addNoticeBtn").onclick=()=>$("#noticeModal").classList.add("open");
-$("#closeNotice").onclick=()=>closeModal("#noticeModal");
-$("#noticeModal").addEventListener("click",e=>{if(e.target.id==="noticeModal")closeModal("#noticeModal")});
-$("#saveNotice").onclick=()=>{
- const title=$("#noticeTitle").value.trim(),body=$("#noticeBody").value.trim();
- if(!title||!body){showToast("Add a title and message first.");return}
- notices.unshift({date:"JUST ADDED",title,body});renderNotices();
- $("#noticeTitle").value="";$("#noticeBody").value="";closeModal("#noticeModal");showToast("Notice added in this browser.");
-};
-
-$("#addMemoryBtn").onclick=()=>{
- const picker=document.createElement("input");picker.type="file";picker.accept="image/*";
- picker.onchange=()=>{
-  const file=picker.files[0];if(!file)return;
-  if(file.size>5*1024*1024){showToast("Choose an image smaller than 5 MB.");return}
-  const url=URL.createObjectURL(file),card=document.createElement("article");
-  card.className="memory-card";card.innerHTML=`<div class="memory-art"><img alt="A memory added in this browser" src="${url}"></div><div class="memory-info"><strong>${esc(file.name.replace(/\.[^.]+$/,"")||"A new memory")}</strong><p>Added in this browser session</p></div>`;
-  $("#memoryGrid").prepend(card);showToast("Photo preview added.");
- };picker.click();
-};
 
 function init(){
  renderMembers();renderRanking();renderCategoryGrid();renderNotices();
  $("#homeCount").textContent=members.length;
  const leader=sortedBy("total")[0];$("#topScore").innerHTML=leader.total+'<span style="font-size:13px;color:#89939c"> / 100</span>';$("#topName").textContent=leader.name;
  $("#avatarStack").innerHTML=members.slice(0,5).map((m,i)=>`<div class="avatar tone-${i}">${initials(m.name)}</div>`).join("");
- $("#homeUpdates").innerHTML=notices.slice(0,2).map(n=>`<div class="update-row"><div class="update-date">${n.date==="SEASON 01"?"S1":"NOV<br>11"}</div><div><strong>${esc(n.title)}</strong><small>${esc(n.body.slice(0,75))}${n.body.length>75?"…":""}</small></div></div>`).join("");
+ $("#homeUpdates").innerHTML=notices.slice(0,2).map(n=>`<div class="update-row"><div class="update-date">${n.date==="SEASON 01"?"S1":esc(n.date.replace(", 2026",""))}</div><div><strong>${esc(n.title)}</strong><small>${esc(n.body.slice(0,75))}${n.body.length>75?"…":""}</small></div></div>`).join("");
 }
 init();
 
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".stat,.feature-card,.section-head,.member-card,.notice-card,.memory-card,.about-main,.about-quote").forEach(el=>{el.classList.add("reveal");observer.observe(el)});
+document.querySelectorAll(".stat,.feature-card,.section-head,.member-card,.notice-card,.about-main,.about-quote").forEach(el=>{el.classList.add("reveal");observer.observe(el)});
 </script>
 </body>
 </html>
